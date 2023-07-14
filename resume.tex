@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.5cm, vmargin=2.25cm}
+\columnratio{0.65, 0.3}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{12pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+% Name & headline
+\heading{Vansh Singh}{I’m a Software Developer specializing in building and designing exceptional digital experiences.}
+
+\switchcolumn
+% Identity card
+\vspace{0.01\textheight}
+\begin{supertabular}{ll}
+  \footnotesize\faPhone & +1 780 708 1340 \\
+  \footnotesize\faEnvelope & \href{mailto:vanshsinghvansh@gmail.com}{vansh2@ualberta.ca} \\
+  \footnotesize\faLinkedin & \href{https://linkedin.com/in/easyvansh/}{easyvansh}\\
+  \footnotesize\faGithub & \href{https://github.com/easyvansh}{easyvansh}\\
+\end{supertabular}
+
+\smallskip
+\switchcolumn*
+
+\section{education}
+\smallskip
+\entry{University Of Alberta}{BSC Speciliazation, Computer Science}{Edmonton, Canada}{2021 -- 2025}
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Object Oriented Programming and Paradigms
+  \item Data Structures and Algorithms
+  \item File and Database Management Systems
+\end{itemize}
+
+\entry{Doon International School}{XII (CBSE)}{Dehradun, India}{2021}
+\switchcolumn
+
+\section{skills}
+\smallskip
+\begin{supertabular}{rl}
+  \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} C/C++ \textperiodcentered{} JavaScript}{}
+  \tableentry{}{SQL \textperiodcentered{} MongoDB\textperiodcentered{} HTML/CSS}{}
+
+  \tableentry{\footnotesize\faFileCode}{ React Native/JS\textperiodcentered{} Git \textperiodcentered{} Node}{}
+  \tableentry{}{Pandas \textperiodcentered{} Selenium \textperiodcentered{} VS Code}{}
+  
+  \tableentry{}{ BeautifulSoup \textperiodcentered{} NumPy \textperiodcentered{} Django}{}
+  \tableentry{\footnotesize\faLaptopCode}{Git \textperiodcentered{} Linux \textperiodcentered{} Google Firebase}{}
+  \tableentry{}{MySql \textperiodcentered{} SQLite \textperiodcentered{} Android Studio }{}
+  
+  \tableentry{}{HeroKu \textperiodcentered{} Google Cloud Platform}{}
+
+  \tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} Proficient}{}
+  \tableentry{}{Hindi \textperiodcentered{} Native}{}
+\end{supertabular}
+
+\switchcolumn*
+
+\section{Projects}
+\smallskip
+\entry{\raggedright\textbf{Shop Squad} \hfill (React Native, Redux ToolKit and Stripe)}{}{}{}
+\vspace{-\topsep}
+\begin{itemize}[noitemsep,leftmargin=2.5mm,rightmargin=0mm,topsep=0pt]
+  \item Developed React Native app with group buy feature for a startup.
+  \item Implemented secure payment gateways and user authentication.
+  \item Designed visually appealing UI and optimized user experience.
+\end{itemize}
+
+\smallskip
+
+\entry{\raggedright\textbf{Weather App} \hfill (React Native, Weather API \& GeoLocation)}{}{}{}
+\vspace{-\topsep}
+\begin{itemize}[noitemsep,leftmargin=2.5mm,rightmargin=0mm,topsep=0pt]
+  \item Developed a real-time weather app for mobile using React Native.
+  \item Integrated weather APIs for accurate weather data retrieval.
+  \item Implemented geolocation for auto location detection.
+\end{itemize}
+
+\smallskip
+
+\entry{\raggedright\textbf{To-Do } \hfill (React JS, JavaScript, HTML and CSS)}{}{}{}
+\vspace{-\topsep}
+\begin{itemize}[noitemsep,leftmargin=2.5mm,rightmargin=0mm,topsep=0pt]
+  \item Developed a dynamic to-do list application using React JS.
+  \item Utilized core components, state management, \& event handling.
+  \item Employed modern front-end development practices.
+  \item Deployed using GitHub Pages.
+\end{itemize}
+
+
+\smallskip
+
+\entry{\raggedright\textbf{Web Scraper} \hfill (Python and BeautifulSoup)}{}{}{}
+\vspace{-\topsep}
+\begin{itemize}[noitemsep,leftmargin=2.5mm,rightmargin=0mm,topsep=0pt]
+  \item Developed a Python web scraper for data extraction from diverse websites.
+  \item Enabled efficient parsing and analysis of scraped data.
+  \item Automated data extraction from multiple websites.
+\end{itemize}
+
+
+\switchcolumn
+\section{honors and awards}
+\smallskip
+\begin{supertabular}{rl}
+  \tableentry{2021}{\textbf{International Scholarship}}{}
+  \tableentry{}{University of Alberta}{spaceafter}
+  \tableentry{2021}{\textbf{Second-Ranked Team}}{}
+  \tableentry{}{Calgary Youth Hackathon}{spaceafter}
+\end{supertabular}
+
+
+\smallskip
+
+\section{other interests}
+\smallskip
+\begin{supertabular}{rl}
+  \tableentry{Web/App Dev}{UI/UX Design}{}
+  \tableentry{}{Back-End Development}{spaceafter}
+  \tableentry{Data Science}{Analytics}{}
+  \tableentry{}{Recommendation Sys}{spaceafter}
+  \tableentry{Automation}{Artificial Intelligence}{}
+  \tableentry{}{Machine Learning}{spaceafter}
+  \tableentry{Volunteer}{Conversation Club}{}
+  \tableentry{}{Debate Club}{spaceafter}
+\end{supertabular}
+
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
