@@ -1,3 +1,3 @@
-### Resume
+# Resume
 
-## Personal Repository to store the LaTex code of my Resume
+### Personal Repository to store the LaTex code of my Resume
