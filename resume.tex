@@ -1,177 +1,209 @@
-\documentclass[12pt]{article}
-\usepackage[english]{babel}
-\usepackage{cmbright}
-\usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{fontawesome5}
-\usepackage{geometry}
-\usepackage{hyperref}
-\usepackage[sf]{libertine}
+\documentclass[letterpaper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright} % added from otherfile.tex
+\usepackage[sf]{libertine} % added from otherfile.tex
+% Remove or comment out the Georgia font setting
+% \fontfamily{Georgia}\selectfont
+% \fontseries{m}\selectfont
+%...
+
+\usepackage{latexsym}
 \usepackage{microtype}
-\usepackage{paracol}
-\usepackage{supertabular}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-% Geometry
-\geometry{hmargin=1cm, vmargin=1cm}
-\columnratio{0.68, 0.3}
-\setlength\columnsep{0.01\textwidth}
-\setlength\parindent{0pt}
-\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
-\setlength{\medskipamount}{12pt plus 6pt minus 6pt}
-\setlength{\bigskipamount}{16pt plus 8pt minus 8pt}
+\renewcommand{\bfseries}{\fontseries{b}\selectfont}
 
-% Style
-\pagestyle{empty}
-\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
-\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
-\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
-\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\small\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \footnotesize\textbf{#1} & \footnotesize #2 \\
+      \footnotesize\textit{#3} & \footnotesize\textit{#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\scriptsize$\cdot$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, labelsep=.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-\vspace*{\fill}
+%----------HEADING----------
 
-\begin{paracol}{2}
+\begin{center}
+    {\LARGE \scshape \bfseries Vansh Singh} \\ \vspace{1pt}
+    I’m a Software Developer specializing in building and designing exceptional digital experiences. \\ \vspace{1pt}
+    \small +1 780 708 1340 $|$ \href{mailto:vansh2@ualberta.ca}{\underline{vansh2@ualberta.ca}} $|$ 
+    \href{https://linkedin.com/in/easyvansh/}{\underline{linkedin.com/in/easyvansh}} $|$
+    \href{https://github.com/easyvansh}{\underline{github.com/easyvansh}}
+\end{center}
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Alberta}{Edmonton, AB}
+      {Bachelors of Science (BSC), Computer Science}{Aug. 2021 -- Current}
+  \resumeSubHeadingListEnd
 
-% Name & headline
-\heading{Vansh Singh}{I’m a Software Developer specializing in building and designing exceptional digital experiences.}
-
-\switchcolumn
-% Identity card
-\vspace{0\textheight}
-\begin{supertabular}{ll}
-  \footnotesize\faPhone & +1 780 708 1340 \\
-  \footnotesize\faEnvelope & \href{mailto:vanshsinghvansh@gmail.com}{vansh2@ualberta.ca} \\
-  \footnotesize\faLinkedin & \href{https://linkedin.com/in/easyvansh/}{easyvansh}\\
-  \footnotesize\faGithub & \href{https://github.com/easyvansh}{easyvansh}\\
-\end{supertabular}
-
-
-
-\switchcolumn
-
-\section{education}
-\entry{University Of Alberta}{BSC Speciliazation, Computer Science}{Edmonton, Canada}{2021 -- 2025}
-\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=0pt]
-  \item Object Oriented Programming and Paradigms
-  \item Data Structures and Algorithms
-  \item File and Database Management Systems
-\end{itemize}
-
-\entry{Doon International School}{XII (CBSE)}{Dehradun, India}{2021}
-
-\section{Projects}
-
-\entry{\raggedright\textbf & \href{https://github.com/easyvansh/shop-squad}{Shop Squad} \hfill (React Native, Redux ToolKit and Stripe)}{}{}{}
-\vspace{-\topsep}
-\begin{itemize}[noitemsep,leftmargin=1.5mm,rightmargin=0mm,topsep=0pt]
-  \item Spearheaded the development of a cutting-edge React Native application, bolstering the group-buy functionality for a dynamic startup.
-  \item Fortified the platform with robust security measures, incorporating secure payment gateways(stripe) and seamless user authentication.
-  \item Elevated user engagement and satisfaction by crafting an aesthetically pleasing user interface and optimizing the overall user experience.
-\end{itemize}
-
-\smallskip
-
-\entry{\raggedright\textbf & \href{https://github.com/easyvansh/Weather-App}{Weather App} \hfill (React Native, Weather API \& GeoLocation)}{}{}{}
-\vspace{-\topsep}
-\begin{itemize}[noitemsep,leftmargin=1.5mm,rightmargin=0mm,topsep=0pt]
-  \item Engineered a real-time mobile application using React Native, providing up-to-the-minute weather updates.
-  \item Seamlessly integrated Weather APIs to ensure precise weather data retrieval.
-  \item Implemented advanced Geolocation functionality, enabling automatic detection of the user's current location for a seamless experience.
-\end{itemize}
-
-\smallskip
-
-\entry{\raggedright\textbf & \href{https://github.com/easyvansh/Film-Wizard}{Film Wizard } \hfill (Python, Streamlit, Scikit, Pandas \& NumPy)}{}{}{}
-\vspace{-\topsep}
-\begin{itemize}[noitemsep,leftmargin=1.5mm,rightmargin=0mm,topsep=0pt]
-  \item Developed a movie recommendation system web application using the TMDB Movies Dataset, easing the movie-selection process experience for users.
-  \item Implemented TF-IDF algorithms to deliver personalized movie suggestions based on user preferences and viewing history.
-  \item Designed and implemented a friendly GUI, ensuring seamless navigation.
-\end{itemize}
-
-\smallskip
-
-\entry{\raggedright\textbf & \href{https://github.com/easyvansh/QuickWit}{QuickWit} \hfill (Python,Tkinter and PyMuPDF)}{}{}{}
-\vspace{-\topsep}
-\begin{itemize}[noitemsep,leftmargin=1.5mm,rightmargin=0mm,topsep=0pt]
-  \item Developed a feature-rich speed reading application, utilizing the Rapid Serial Visual Presentation (RSVP) technique to significantly boost reading speed and comprehension.
-  \item Designed a user-friendly GUI for loading PDFs and text documents, allowing easy start, stop, and resume reading.
-  \item Actively contributed to the open-source community by developing Quick Wit and making it available for public use.
-
-\end{itemize}
-\smallskip
-
-% \entry{\raggedright\textbf & \href{https://github.com/easyvansh/To-Do-List}{To-Do List App} \hfill (React JS, JavaScript, HTML and CSS)}{}{}{}
-% \vspace{-\topsep}
-% \begin{itemize}[noitemsep,leftmargin=1.5mm,rightmargin=0mm,topsep=0pt]
-%   \item Developed a dynamic to-do list application using React JS.
-%   \item Utilized core components, state management, \& event handling.
-%   \item Employed modern front-end development practices.
-%   \item Deployed using GitHub Pages.
-% \end{itemize}
+%-----------HIGHLIGHTS-----------
+\section{HIGHLIGHTS}
+  \resumeSubHeadingListStart
+    \resumeItem{Robust foundation in computer science concepts such as Object Oriented Programming Pradaigms and proficiency in front-end and back-end development, proficient in frameworks such as React, Express, Node.js, and databases like SQL and MongoDB.}
+    \resumeItem{Proficient in cloud computing (Firebase, GCP), dedicated to developing scalable applications and adhering to best practices in code maintainability, optimization, and documentation.}
+    \resumeItem{Committed to lifelong learning in evolving tech landscapes, coupled with strong interpersonal and communication skills for effective teamwork in diverse environments.}
+\resumeSubHeadingListEnd
 
 
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
 
-\switchcolumn
-\section{About Me}
+    \resumeProjectHeading
+      {\href{https://github.com/easyvansh/shop-squad}{\textbf{Shop Squad }}}{\textbf{React Native, Redux Toolkit, Express JS and Stripe}}
+      \resumeItemListStart
+        \resumeItem{Spearheaded the development of a cutting-edge React Native application, bolstering the group-buy functionality for a dynamic startup.}
+        \resumeItem{Fortified the platform with robust security measures, incorporating secure payment gateways(stripe) and seamless user authentication.}
+        \resumeItem{Elevated user engagement and satisfaction by crafting an aesthetically pleasing user interface and optimizing the overall user experience.}
+      \resumeItemListEnd
 
-\begin{itemize}[noitemsep,leftmargin=3.5mm]
-  \item Tech enthusiast, constantly learning and contributing to projects.
-   \item Team player, fostering collaboration and positive dynamics.
-    \item Clear communicator, ensuring project success through collaboration.
-\end{itemize}
+    \resumeProjectHeading
+      {\href{https://github.com/easyvansh/Weather-App}{\textbf{Weather App}}}{\textbf{React Native, Weather API and Geolocation}}
+      \resumeItemListStart
+        \resumeItem{Engineered a real-time mobile application using React Native, providing up-to-the-minute weather updates.}
+        \resumeItem{Seamlessly integrated Weather APIs to ensure precise weather data retrieval.}
+        \resumeItem{Implemented advanced Geolocation functionality, enabling automatic detection of the user's current location for a seamless experience.}
+      \resumeItemListEnd
+    
+    \resumeProjectHeading
+      {\href{https://github.com/easyvansh/Film-Wizard}{\textbf{Film Wizard}}}{\textbf{Python, Streamlit, Scikit, Pandas and NumPy}}
+      \resumeItemListStart
+        \resumeItem{Developed a movie recommendation system web application using the TMDB Movies Dataset, easing the movie-selection process experience for users.}
+        \resumeItem{Implemented TF-IDF algorithms to deliver personalized movie suggestions based on user preferences and viewing history.}
+        \resumeItem{Designed and implemented a friendly GUI, ensuring seamless navigation.}
+      \resumeItemListEnd
 
-\section{skills}
+    \resumeProjectHeading
+      {\href{https://github.com/easyvansh/QuickWit}{\textbf{QuickWit}}}{\textbf{Python, Tkinter and PyMuPDF}}
+      \resumeItemListStart
+        \resumeItem{Developed a feature-rich speed reading application, utilizing the Rapid Serial Visual Presentation (RSVP) technique to significantly boost reading speed and comprehension.}
+        \resumeItem{Designed a user-friendly GUI for loading PDFs and text documents, allowing easy start, stop, and resume reading.}
+        \resumeItem{Actively contributed to the open-source community by developing Quick Wit and making it available for public use.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://github.com/easyvansh/To-Do-List}{\textbf {To Do List Dashboard}}}{\textbf{React JS}}
+      \resumeItemListStart
+        \resumeItem{Developed a highly interactive and user-friendly to-do list application using React JS, enabling efficient task management and organization.}
+        \resumeItem{Implemented advanced features like task categorization, deadlines, and priority tagging, allowing users to manage tasks more effectively.}
+        \resumeItem{Integrated responsive design principles to ensure a seamless user experience across various devices and screen sizes.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+% 
+%-----------SKILLS-----------
+\section{ SKILLS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Languages:} Python, C/C\small{++}, Javascript, SQL, MongoDB, HTML/CSS, Shell}{}
+      \resumeProjectHeading
+          {\textbf{Frameworks:} React/Next JS, React Native, Node JS, Express JS, Pandas, Selenium, Numpy}{}
+      \resumeProjectHeading
+          {\textbf{Developer Tools:} Git, Linux, Google Firebase, Google Cloud Platform,  MySQL, Android Studio}{}
+    \resumeSubHeadingListEnd
 
-\begin{supertabular}{rl}
-  \tableentry{\footnotesize\faCode}{Python \textperiodcentered{} C/C++ \textperiodcentered{} JavaScript}{}
-  \tableentry{}{SQL \textperiodcentered{} MongoDB\textperiodcentered{} HTML/CSS}{}
+%
+%-----------Honors and Awards-----------
+\section{ HONORS AND AWARDS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{International Student Scholarship:} Awarded by University of Alberta.}{}
+      \resumeProjectHeading
+          {\textbf{Second Ranked Team:} Runner Ups at the Calgary Youth Hackathon for developing a web tool for seeking mental health support.}{}
+    \resumeSubHeadingListEnd
 
-  \tableentry{\footnotesize\faFileCode}{ React Native/JS\textperiodcentered{} Git \textperiodcentered{} Node}{}
-  \tableentry{}{Pandas \textperiodcentered{} Selenium \textperiodcentered{} VS Code}{}
-  
-  \tableentry{}{ BeautifulSoup \textperiodcentered{} NumPy \textperiodcentered{} Django}{}
-  \tableentry{\footnotesize\faLaptopCode}{Git \textperiodcentered{} Linux \textperiodcentered{} Google Firebase}{}
-  \tableentry{}{MySql \textperiodcentered{} SQLite \textperiodcentered{} Android Studio }{}
-  
-  \tableentry{}{HeroKu \textperiodcentered{} Google Cloud Platform}{}
+%
+%-----------OTHER INTERESTS-----------
+\section{OTHER INTERESTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Volunteer Work:} Participated in Conversation Club and Debate Club.}{}
+      \resumeProjectHeading
+          {\textbf{Reading:} Enthusiastic reader of Non-fiction and Classic literature.}{}
+      \resumeProjectHeading
+          {\textbf{Technology:} Keen interest in Artificial Intelligence and Machine/Deep Learning.}{}
+    \resumeSubHeadingListEnd
 
-  \tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} Proficient}{}
-  \tableentry{}{Hindi \textperiodcentered{} Native}{}
-\end{supertabular}
-
-
-
-\section{honors and awards}
-
-\begin{supertabular}{rl}
-  \tableentry{2021}{\textbf{International Scholarship}}{}
-  \tableentry{}{University of Alberta}{spaceafter}
-  \tableentry{2021}{\textbf{Second-Ranked Team}}{}
-  \tableentry{}{Calgary Youth Hackathon}{spaceafter}
-\end{supertabular}
-
-
-\section{other interests}
-\smallskip
-\begin{supertabular}{rl}
-  \tableentry{Volunteer}{Conversation Club}{}
-  \tableentry{}{Debate Club}{spaceafter}
-  \tableentry{Books}{Non Fiction}{}
-  \tableentry{}{Classic}{spaceafter}
-  \tableentry{Automation}{Artificial Intelligence}{}
-  \tableentry{}{Machine/Deep Learning}{spaceafter}}
-  \tableentry{Anime \& Manga}{Shonen}{}
-  \tableentry{}{}{spaceafter}}
-\end{supertabular}
-
-
-\end{paracol}
-
-\vspace*{\fill}
-
+%-------------------------------------------
 \end{document}
